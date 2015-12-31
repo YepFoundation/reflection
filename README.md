@@ -5,7 +5,7 @@
 [![Total Downloads](https://poser.pugx.org/yep/reflection/downloads)](https://packagist.org/packages/yep/reflection)
 [![License](https://poser.pugx.org/yep/reflection/license)](https://github.com/YepFoundation/reflection/blob/master/LICENSE.md)
 
-# PHP class reflection enhancements
+# PHP class reflection enhancements ([docs](http://yepfoundation.github.io/reflection))
 
 ## Packagist
 Reflection is available on [Packagist.org](https://packagist.org/packages/yep/reflection),
