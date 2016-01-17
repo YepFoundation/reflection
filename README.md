@@ -29,6 +29,7 @@ php composer.phar require yep/reflection
 
 ### "Test subject"
 ```php
+<?php
 class SomeClass {
 	protected $some_property;
 
@@ -49,6 +50,7 @@ class SomeClass {
 ### You can simply call the protected or private method
 
 ```php
+<?php
 $some_class = new SomeClass();
 
 echo \Yep\Reflection\ReflectionClass::from($class = $some_class)->invokeMethod($method = 'someMethod', $arguments = ['foo']); // 'foo'
@@ -57,6 +59,7 @@ echo \Yep\Reflection\ReflectionClass::from($class = $some_class)->invokeMethod($
 ### You can simply set value to the protected or private property
 
 ```php
+<?php
 $some_class = new SomeClass();
 
 \Yep\Reflection\ReflectionClass::from($class = $some_class)->setPropertyValue($property = 'some_property', $value = 'foo');
@@ -67,6 +70,7 @@ echo $some_class->getSomeProperty(); // 'foo'
 ### You can simply get value from the protected or private property
 
 ```php
+<?php
 $some_class = new SomeClass();
 $some_class->setSomeProperty('foo');
 
