@@ -127,7 +127,7 @@ class ReflectionClassTest extends PHPUnit_Framework_TestCase
         );
     }
 
-    public function testParent()
+    public function testGetParent()
     {
         $class = new TestClass3();
         $reflection = ReflectionClass::from($class);
@@ -142,6 +142,14 @@ class ReflectionClassTest extends PHPUnit_Framework_TestCase
         $reflection = $reflection->getParent();
         $this->assertInstanceOf(ReflectionClass::class, $reflection);
         $this->assertSame(1, $reflection->getPropertyValue('testProperty'));
+    }
+
+    public function testGetObject()
+    {
+        $class = new TestClass();
+        $reflection = ReflectionClass::from($class);
+
+        $this->assertSame($class, $reflection->getObject());
     }
 }
 
