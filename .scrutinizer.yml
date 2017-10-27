@@ -75,8 +75,7 @@ build:
     tests:
         override:
             -
-                command: 'phpunit --configuration phpunit.xml --coverage-clover=some-file'
-                idle_timeout: 600
+                command: 'vendor/bin/phpunit --coverage-clover=some-file'
                 coverage:
                     file: 'some-file'
-                    format: 'php-clover'
+                    format: 'clover'
