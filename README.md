@@ -27,52 +27,69 @@ php composer.phar require yep/reflection
 
 ## What do Yep/Reflection?
 
-### "Test subject"
+### "Test subject" and example code
 ```php
 <?php
 class SomeClass {
-	protected $some_property;
+	private $someProperty;
 
-	protected function someMethod($some_argument) {
-		return $some_argument;
+	protected function someMethod($someArgument) {
+		return $someArgument;
 	}
 
 	public function getSomeProperty() {
-		return $this->some_property;
+		return $this->someProperty;
 	}
 
-	public function setSomeProperty($some_property) {
-		$this->some_property = $some_property;
+	public function setSomeProperty($someProperty) {
+		$this->someProperty = $someProperty;
 	}
 }
+
+class SomeClass2 extends SomeClass {
+}
+
+$someClass = new SomeClass();
+$reflection = \Yep\Reflection\ReflectionClass::from($class = $someClass);
 ```
 
 ### You can simply call the protected or private method
 
 ```php
 <?php
-$some_class = new SomeClass();
+$someClass = new SomeClass();
 
-echo \Yep\Reflection\ReflectionClass::from($class = $some_class)->invokeMethod($method = 'someMethod', $arguments = ['foo']); // 'foo'
+echo $reflection->invokeMethod($method = 'someMethod', $arguments = ['foo']); // 'foo'
 ```
 
 ### You can simply set value to the protected or private property
 
 ```php
 <?php
-$some_class = new SomeClass();
+$someClass = new SomeClass();
 
-\Yep\Reflection\ReflectionClass::from($class = $some_class)->setPropertyValue($property = 'some_property', $value = 'foo');
+$reflection->setPropertyValue($property = 'someProperty', $value = 'foo');
 
-echo $some_class->getSomeProperty(); // 'foo'
+echo $someClass->getSomeProperty(); // 'foo'
 ```
 
 ### You can simply get value from the protected or private property
 
 ```php
 <?php
-$some_class = new SomeClass();
-$some_class->setSomeProperty('foo');
+$someClass = new SomeClass();
+$someClass->setSomeProperty('foo');
 
-echo \Yep\Reflection\ReflectionClass::from($class = $some_class)->getPropertyValue($property = 'some_property'); // 'foo';
+echo $reflection->getPropertyValue($property = 'someProperty'); // 'foo';
+```
+
+
+### Wanna access parent or parent's private property?
+
+```php
+<?php
+$someClass = new SomeClass2();
+$someClass->setSomeProperty('foo');
+
+echo $reflection->getParent()->getPropertyValue($property = 'someProperty'); // 'foo';
 ```
