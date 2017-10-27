@@ -1,9 +1,9 @@
-[![Build Status](https://travis-ci.org/YepFoundation/reflection.svg?branch=v2)](https://travis-ci.org/YepFoundation/reflection)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/YepFoundation/reflection/badges/quality-score.png?b=v2)](https://scrutinizer-ci.com/g/YepFoundation/reflection/?branch=v2)
-[![Scrutinizer Code Coverage](https://scrutinizer-ci.com/g/YepFoundation/reflection/badges/coverage.png?b=v2)](https://scrutinizer-ci.com/g/YepFoundation/reflection/?branch=v2)
+[![Build Status](https://travis-ci.org/YepFoundation/reflection.svg?branch=master)](https://travis-ci.org/YepFoundation/reflection)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/YepFoundation/reflection/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/YepFoundation/reflection/?branch=master)
+[![Scrutinizer Code Coverage](https://scrutinizer-ci.com/g/YepFoundation/reflection/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/YepFoundation/reflection/?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/yep/reflection/v/stable)](https://packagist.org/packages/yep/reflection)
 [![Total Downloads](https://poser.pugx.org/yep/reflection/downloads)](https://packagist.org/packages/yep/reflection)
-[![License](https://poser.pugx.org/yep/reflection/license)](https://github.com/YepFoundation/reflection/blob/v2/LICENSE.md)
+[![License](https://poser.pugx.org/yep/reflection/license)](https://github.com/YepFoundation/reflection/blob/master/LICENSE.md)
 
 # PHP class reflection enhancements (For PHP7+)
 
