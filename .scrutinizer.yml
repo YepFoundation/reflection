@@ -98,3 +98,13 @@ tools:
     sensiolabs_security_checker: true
     external_code_coverage:
         timeout: 600
+
+
+build:
+    tests:
+        override:
+            -
+                command: 'vendor/bin/phpunit --coverage-clover=some-file'
+                coverage:
+                    file: 'some-file'
+                    format: 'clover'
