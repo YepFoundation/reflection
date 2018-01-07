@@ -1,4 +1,8 @@
 <?php
+/**
+ * This file is part of the Yep package.
+ * Copyright (c) 2018 Martin Zeman (Zemistr) (http://www.zemistr.eu)
+ */
 declare(strict_types=1);
 
 namespace Yep\Reflection;
