@@ -1,4 +1,9 @@
 <?php
+/**
+ * This file is part of the Yep package.
+ * Copyright (c) 2018 Martin Zeman (Zemistr) (http://www.zemistr.eu)
+ */
+
 use Yep\Reflection\ReflectionClass;
 
 class ReflectionClassTest extends PHPUnit_Framework_TestCase {
